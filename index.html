@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Java</title>
+</head>
+<body>
+    <h1>Criar lista de tarefas</h1>
+    <input type="text" id="lista" placehulder="Digite sua lista">
+    <button onclick="digitarlista()">Digitar lista</button>  
+         <ul id="texto"></ul>
+ 
+    
+
+    <script>
+        function digitarlista() {
+            const Lista = document.getElementById("lista").value; 
+            const item = document.createElement("li");
+            item.textContent = Lista;
+            document.getElementById("texto").appendChild(item);
+        }
+    </script>
+    
+</body>
+</html>

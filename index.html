@@ -6,11 +6,17 @@
     <title>Legal Java</title>
 </head>
 <body>
-    <h1>Criar lista de tarefas</h1>
-    <input type="text" id="lista" placehulder="Digite sua lista">
-    <button onclick="digitarlista()">Digitar lista</button>  
+    <h1>Site para criar listas</h1>
+    <p>Para criar a lista, basta colocar o conteúdo que você quer e a data do dia que você realizou aquela atividade ou tarefa</p>
+    <h2>Criar lista de tarefas</h2>
+    
+    <input type="text" id="lista" placeholder="Digite sua tarefa">
+    <input type="text" id="calendário" placeholder="00/00/0000">
+    <button onclick="digitarlista()"> Add dados </button> 
+    
+    
          <ul id="texto"></ul>
- 
+ <ul id="data" ></ul>
     
 
     <script>
@@ -18,7 +24,18 @@
             const Lista = document.getElementById("lista").value; 
             const item = document.createElement("li");
             item.textContent = Lista;
+            
             document.getElementById("texto").appendChild(item);
+
+            const data = document.getElementById("calendário").value;
+            const novoItem = document.createElement("li");
+            data.textContent = novoItem;
+        
+            
+            
+           
+            
+            
         }
     </script>
     
